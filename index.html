@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Nav</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>A story about getting lost</h1>
+    </header>
+    <nav id="main">
+        <ul>
+            <li class="logo"><a href="#">LOST.</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Images</a></li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">Map</a></li>
+        </ul>
+    </nav>
+    <div class="site-wrap">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, similique est. Blanditiis vel aliquid dolorem eos perferendis distinctio! Quam, iste voluptatem molestiae earum expedita officiis quis labore nesciunt modi a.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nam consectetur fugit mollitia, fuga ut rerum, repudiandae recusandae amet beatae dolor illo quo harum adipisci odio eum aspernatur accusamus eaque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quidem mollitia, dolore rerum sed aliquam commodi soluta cumque repellendus corrupti quod delectus praesentium sunt itaque quis eligendi nulla. Mollitia, dolorum.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error optio nemo accusamus unde amet nesciunt doloribus vel laudantium, explicabo quae minima iure. Consectetur, possimus voluptatum aliquam rerum qui assumenda explicabo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sequi commodi tenetur ratione aperiam quas consectetur! Enim repellendus nemo in neque ab eum perspiciatis, optio sunt reiciendis numquam. A, numquam.</p>
+        <img src="" class="align-left slide-in">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum reiciendis facilis nam saepe, vero minima sed ipsam maiores illo veniam omnis repellendus, sit quam fuga, eligendi laudantium autem consectetur provident.</p>
+        <img src="" class="align-right slide-in">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum neque et laudantium. Iusto nulla et quasi obcaecati! Dicta doloremque, autem reprehenderit itaque eveniet sequi soluta corporis error eaque necessitatibus.</p>
+        <img src="" class="align-right slide-in">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum omnis cumque debitis commodi. Unde minus eligendi, tempore tenetur molestiae molestias ducimus, eum sequi et praesentium vel saepe culpa libero asperiores?</p>
+    </div>
+    <script>
+        const nav = document.querySelector('#main');
+        const topOfNav = nav.offsetTop;
+
+        function fixNav() {
+            if(window.scrollY >= topOfNav) {
+                document.body.style.paddingTop = nav.offsetHeight + 'px';
+                document.body.classList.add('fixed-nav');
+            } else {
+                document.body.style.paddingTop = 0;
+                document.body.classList.remove('fixed-nav');
+            }
+        }
+
+        window.addEventListener('scroll', fixNav);
+    </script>
+</body>
+</html>
